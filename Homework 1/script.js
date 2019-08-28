@@ -12,14 +12,14 @@ var appData = {
     savings         : false
 };
 
-let expences1 = prompt("Введите обязательную статью расходов в этом месяце?", 
+let exp1 = prompt("Введите обязательную статью расходов в этом месяце?", 
 "Бензин");
-let expences2 = prompt("Во сколько обойдется?", "10000");
-let expences3 = prompt("Введите обязательную статью расходов в этом месяце?", 
+let exp2 = prompt("Во сколько обойдется?", "10000");
+let exp3 = prompt("Введите обязательную статью расходов в этом месяце?", 
 " Еда");
-let expences4 = prompt("Во сколько обойдется?", "20000");
+let exp4 = prompt("Во сколько обойдется?", "20000");
 
-appData.expences.expences1 = expences2;
-appData.expences.expences3 = expences4;
+appData.expences.exp1 = exp2;
+appData.expences.exp3 = exp4;
 
 alert(appData.moneyData/30);
