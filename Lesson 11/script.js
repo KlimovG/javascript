@@ -18,9 +18,9 @@ let num = 10;
 // }
 // while (num < 55);
 
-for (let i = 1; i < 8; i++) {
-    if (i == 6) {
-        break;
+for (let i = 1; i < 20; i++) {
+    if (i % 2 == 1) {
+        continue;
     }
-    console.log(i)
+    console.log(i);
 }
