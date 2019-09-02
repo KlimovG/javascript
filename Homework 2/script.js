@@ -12,34 +12,34 @@ var appData = {
     savings         : false
 };
 
-// for (let i = 0; i < 2; i++) {
-//     let a = prompt("Введите обязательную статью расходов в этом месяце?", 
-// "Бензин"),
-//         b = prompt("Во сколько обойдется?", "10000");
-    
-//     if ((typeof(a)) === "string" && (typeof(a)) != null && (typeof(b)) != null
-//         && a != "" && b != "" && a.length < 50) {
-//         console.log("done");
-//         appData.expences[a] = b;
-//     } else {
-//         i--;
-//     }
-// }
-let i = 0;
-while ( i < 2) {
-    i++;
+for (let i = 0; i < 2; i++) {
     let a = prompt("Введите обязательную статью расходов в этом месяце?", 
-    "Бензин");
-    let b = prompt("Во сколько обойдется?", "10000");
-        
+"Бензин"),
+        b = prompt("Во сколько обойдется?", "10000");
+    
     if ((typeof(a)) === "string" && (typeof(a)) != null && (typeof(b)) != null
         && a != "" && b != "" && a.length < 50) {
         console.log("done");
         appData.expences[a] = b;
     } else {
-       i--;
-        }   
+        i--;
+    }
 }
+// let i = 0;
+// while ( i < 2) {
+//     i++;
+//     let a = prompt("Введите обязательную статью расходов в этом месяце?", 
+//     "Бензин");
+//     let b = prompt("Во сколько обойдется?", "10000");
+        
+//     if ((typeof(a)) === "string" && (typeof(a)) != null && (typeof(b)) != null
+//         && a != "" && b != "" && a.length < 50) {
+//         console.log("done");
+//         appData.expences[a] = b;
+//     } else {
+//        i--;
+//         }   
+// }
 // let i = 0;
 // do {
 //     // var i = 0;
