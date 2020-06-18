@@ -1,75 +1,62 @@
-"use strict";
-
-let money = +prompt("Ваш бюджет на месяц?", "50000");
-let time = prompt("Введите дату в формате YYYY-MM-DD", "1991-04-02");
-    
-var appData = {
-    moneyData       : money,
-    timeData        : time,
-    expences        : {},
-    optionalExpences: {},
-    incomeData      : [],
-    savings         : false
+const numberOfFilms = +prompt('Cколько фильмов вы уже посмотрели?', '');
+const personalMovieDB = {
+    count: numberOfFilms,
+    movies: {},
+    actors: {},
+    genres: [],
+    privat: false,
 };
 
-for (let i = 0; i < 2; i++) {
-    let a = prompt("Введите обязательную статью расходов в этом месяце?", 
-"Бензин"),
-        b = prompt("Во сколько обойдется?", "10000");
+// for ( let i = 0; i < 2; i++) {
+//     const a = prompt('Один из последних просмотренных фильмов?', ''),
+//           b = prompt('На сколько оцените его?', '');
+
     
-    if ((typeof(a)) === "string" && (typeof(a)) != null && (typeof(b)) != null
-        && a != "" && b != "" && a.length < 50) {
-        console.log("done");
-        appData.expences[a] = b;
-    } else {
-        i--;
-    }
-}
-// let i = 0;
-// while ( i < 2) {
-//     i++;
-//     let a = prompt("Введите обязательную статью расходов в этом месяце?", 
-//     "Бензин");
-//     let b = prompt("Во сколько обойдется?", "10000");
-        
-//     if ((typeof(a)) === "string" && (typeof(a)) != null && (typeof(b)) != null
-//         && a != "" && b != "" && a.length < 50) {
-//         console.log("done");
-//         appData.expences[a] = b;
+//     if (a != null && b != null && a != '' && b != '' && a.length < 50 ) {
+//         personalMovieDB.movies[a] = b;
+//         console.log('done');
 //     } else {
-//        i--;
-//         }   
-// }
-// let i = 0;
-// do {
-//     // var i = 0;
-//     i++;
-//     let a = prompt("Введите обязательную статью расходов в этом месяце?", 
-// "Бензин"),
-//         b = prompt("Во сколько обойдется?", "10000");
-    
-//     if ((typeof(a)) === "string" && (typeof(a)) != null && (typeof(b)) != null
-//         && a != "" && b != "" && a.length < 50) {
-//         console.log("done");
-//         appData.expences[a] = b;
-//     } else {
+//         console.log('error')
 //         i--;
 //     }
-//     // i++;
-// } while (i < 2);
+// }
+let i = 0;
+// while ( i < 2) {
+//     const a = prompt('Один из последних просмотренных фильмов?', ''),
+//           b = prompt('На сколько оцените его?', '');
 
+//     if (a != null && b != null && a != '' && b != '' && a.length < 50 ) {
+//         personalMovieDB.movies[a] = b;
+//         console.log('done');
+//     } else {
+//         console.log('error');
+//         i--;
+//     }
+//     i++;
+// }
 
-appData.moneyPerDay = appData.moneyData /30;
+do {
+    const a = prompt('Один из последних просмотренных фильмов?', ''),
+          b = prompt('На сколько оцените его?', '');
 
-alert("Ежедневный бюджет: " + appData.moneyPerDay);
+    if (a != null && b != null && a != '' && b != '' && a.length < 50 ) {
+        personalMovieDB.movies[a] = b;
+        console.log('done');
+    } else {
+        console.log('error');
+        i--;
+    }
+    i++;
+} while (i < 2)
 
-if(appData.moneyPerDay < 100) {
-    console.log("А чё так мало?");
-} else if (appData.moneyPerDay > 100 && appData.moneyPerDay < 2000) {
-    console.log("Ну такое...");
-} else if (appData.moneyPerDay > 2000) {
-    console.log("Можешь купить дошик :)");
+if (personalMovieDB.count <= 10) {
+    alert('Просмотрено мало фильмов');
+} else if (personalMovieDB.count > 10 && personalMovieDB.count <= 30) {
+    alert('Вы классный зритель!');
+} else if (personalMovieDB.count > 30) {
+    alert('Вы киноман');
 } else {
-    console.log("Чё-то я приуныл");
+    alert('Произошла ошибка');
 }
 
+console.log(personalMovieDB);
